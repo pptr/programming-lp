@@ -523,8 +523,56 @@ footer {
     word-break: break-all;
   }
 
+    .hero-label {
+    margin-bottom: 8px;
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  h1 {
+    font-size: 26px;
+    line-height: 1.42;
+    letter-spacing: 0.01em;
+  }
+
+  .hero-catch {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+
+  .career-box,
+  .profile-box {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .career-box {
+    border-left-width: 4px;
+  }
+
+  .career-list {
+    gap: 10px;
+  }
+
   .career-item {
-    grid-template-columns: 1fr;
-    gap: 2px;
+    padding: 12px 0;
+  }
+
+  .career-year {
+    display: inline-block;
+    width: fit-content;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: #dbeafe;
+    font-size: 13px;
+  }
+
+  .profile-box {
+    gap: 14px;
+  }
+
+  .profile-box p {
+    font-size: 15px;
+    line-height: 1.8;
   }
 }
