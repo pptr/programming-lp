@@ -1,0 +1,166 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  padding: 13px 26px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button--primary {
+  color: #fff;
+  background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.28);
+}
+
+.button--secondary {
+  color: var(--blue-dark);
+  background: #fff;
+  border: 1px solid #bfdbfe;
+}
+
+.surface {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow-md);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.card h3 {
+  color: var(--blue-dark);
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 34px;
+}
+
+.flow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.flow-item {
+  position: relative;
+}
+
+.flow-item span {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: var(--blue);
+  font-weight: 800;
+}
+
+.price-box {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.price,
+.first-price {
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-soft);
+}
+
+.price strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 40px;
+  color: var(--blue);
+}
+
+.first-price strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 32px;
+  color: var(--blue-dark);
+}
+
+.campaign-box {
+  margin: 24px 0;
+  padding: 26px;
+  border: 2px solid #fecaca;
+  border-radius: 22px;
+  background: #fff1f2;
+}
+
+.campaign-title {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  color: #fff;
+  background: var(--red);
+  font-weight: 800;
+}
+
+.campaign-red {
+  color: var(--red-dark);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.campaign-red strong {
+  display: block;
+  font-size: 28px;
+}
+
+.campaign-red-large {
+  color: var(--red);
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.small {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.faq {
+  display: grid;
+  gap: 16px;
+}
+
+.faq-item {
+  padding: 24px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+}
+
+.faq-item h3 {
+  color: var(--blue-dark);
+}
+
+.contact .button--secondary {
+  color: #ffffff;
+  border-color: #ffffff;
+  background: transparent;
+}

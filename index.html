@@ -8,7 +8,22 @@
 </head>
 
 <body>
-<header class="hero">
+<header class="site-header">
+  <div class="container site-header-inner">
+    <a class="site-logo" href="#">NK Works</a>
+
+    <nav class="site-nav" aria-label="メインナビゲーション">
+      <a href="#profile">講師情報</a>
+      <a href="#lesson">レッスン詳細</a>
+      <a href="#price">料金</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <a class="site-header-button" href="mailto:datsilho.ftw@gmail.com">問い合わせ</a>
+  </div>
+</header>
+
+<section class="hero">
   <div class="container">
     <p class="hero-label">学生・社会人不問</p>
     <p class="hero-label">初心者歓迎</p>
@@ -19,9 +34,7 @@
       プログラミングレッスン
     </h1>
 
-    <p class="hero-catch">
-      AI時代だからこそ、考える力が武器になる。
-    </p>
+    <p class="hero-catch">AI時代だからこそ、考える力が武器になる。</p>
 
     <p class="hero-description">
       受講者のレベルと目標に合わせたオーダーメイドレッスン。
@@ -29,13 +42,14 @@
     </p>
 
     <div class="hero-buttons">
-      <a class="button primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1oMFq9wS3znJD91qp8JSfKwD3LoMNsMQNBw1Jx3tbOXKk782JvsL_dksaXFfuW8BPupAmnkvUB" target="_blank" rel="noopener">
+      <a class="button button--primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1oMFq9wS3znJD91qp8JSfKwD3LoMNsMQNBw1Jx3tbOXKk782JvsL_dksaXFfuW8BPupAmnkvUB" target="_blank" rel="noopener">
         レッスン予約
       </a>
-      <a class="button secondary" href="#price">料金を見る</a>
+      <a class="button button--secondary" href="#price">料金を見る</a>
+      <a class="button button--secondary" href="mailto:datsilho.ftw@gmail.com">問い合わせ</a>
     </div>
   </div>
-</header>
+</section>
 
 <section class="campaign-top">
   <div class="container">
@@ -61,17 +75,17 @@
     <h2>こんな方におすすめ</h2>
 
     <div class="cards">
-      <div class="card">
+      <div class="card surface">
         <h3>プログラミングを始めたい</h3>
         <p>未経験・初心者の方でも、環境構築や基本操作からサポートします。</p>
       </div>
 
-      <div class="card">
+      <div class="card surface">
         <h3>学校の授業についていきたい</h3>
         <p>授業内容や課題の理解をサポートし、基礎から丁寧に整理します。</p>
       </div>
 
-      <div class="card">
+      <div class="card surface">
         <h3>将来エンジニアを目指したい</h3>
         <p>文法だけでなく、実務で役立つ考え方・設計力まで学べます。</p>
       </div>
@@ -84,26 +98,24 @@
     <h2>レッスンの特徴</h2>
 
     <div class="cards">
-      <div class="card">
+      <div class="card surface">
         <h3>レベルと目標に合わせたマンツーマン指導</h3>
-        <p>
-            現状と目標をヒアリングし、一人ひとりに合わせてオーダーメイドでレッスン内容を決定します。
-        </p>
+        <p>現状と目標をヒアリングし、一人ひとりに合わせてオーダーメイドでレッスン内容を決定します。</p>
       </div>
 
-      <div class="card">
+      <div class="card surface">
         <h3>実務で役立つ思考力・設計力</h3>
         <p>
-            読みやすいコード、修正しやすい設計、チーム開発で通用する書き方を学べます。
-            実際に動いている大規模プログラムを題材に学ぶことができます。
+          読みやすいコード、修正しやすい設計、チーム開発で通用する書き方を学べます。
+          実際に動いている大規模プログラムを題材に学ぶことができます。
         </p>
       </div>
 
-      <div class="card">
+      <div class="card surface">
         <h3>コードレビューで成長をサポート</h3>
         <p>
-            書いたコードを一緒に見直し、改善点や設計の考え方までフィードバックします。
-            基礎文法だけでなく、実務で有用な実践的プログラミング技術までカバーします。
+          書いたコードを一緒に見直し、改善点や設計の考え方までフィードバックします。
+          基礎文法だけでなく、実務で有用な実践的プログラミング技術までカバーします。
         </p>
       </div>
     </div>
@@ -114,37 +126,38 @@
   <div class="container">
     <h2>講師プロフィール</h2>
 
-    <div class="career-box">
-    <h3>経歴</h3>
+    <div class="career-box surface">
+      <h3>経歴</h3>
 
-        <div class="career-list">
-            <div class="career-item">
-                <span class="career-year">2016〜2018</span>
-                <p>大学研究室で教育用システム開発・学生向け講義アシスタント</p>
-            </div>
-            <div class="career-item">
-                <span class="career-year">2018〜2025</span>
-                <p>富士通グループにて通信システムや組み込みシステムアプリ開発に従事</p>
-            </div>
-            <div class="career-item">
-                <span class="career-year">2025〜現在</span>
-                <p>個人ソフトウェアエンジニア兼IT講師</p>
-            </div>
+      <div class="career-list">
+        <div class="career-item">
+          <span class="career-year">2016〜2018</span>
+          <p>大学研究室で教育用システム開発・学生向け講義アシスタント</p>
         </div>
+        <div class="career-item">
+          <span class="career-year">2018〜2025</span>
+          <p>富士通グループにて通信システムや組み込みシステムアプリ開発に従事</p>
+        </div>
+        <div class="career-item">
+          <span class="career-year">2025〜現在</span>
+          <p>個人ソフトウェアエンジニア兼IT講師</p>
+        </div>
+      </div>
     </div>
-    <div class="profile-box">
-    <p>
+
+    <div class="profile-box surface">
+      <p>
         これまで10年以上ソフトウェア開発に携わり、会社や大学で多くの人がプログラミングにつまずき、
         「自分には向いていない」と諦めてしまう姿を数多く見てきました。
         プログラミングは、学び方が大切な分野だと考えています。
         つまずきを一つずつ解消し、プログラミングを楽しめる人を一人でも増やしたいという思いでレッスンを行っています。
-    </p>
+      </p>
 
-    <p>
+      <p>
         現在はAIの発展により、コード例やエラーの原因を簡単に調べられる時代になりました。
         しかし、実務で求められるのは、動くコードを書くことだけではなく、「なぜその設計にするのか」「どう考えて問題を解決するのか」という力です。
         レッスンでは、AIも活用しながら、将来も役立つ考え方や実践的なプログラミングスキルを身につけられるよう、一人ひとりに合わせて丁寧にサポートします。
-    </p>
+      </p>
     </div>
   </div>
 </section>
@@ -159,7 +172,7 @@
     </p>
 
     <div class="cards">
-      <div class="card">
+      <div class="card surface">
         <h3>対応内容</h3>
         <ul>
           <li>学校の授業・課題</li>
@@ -172,7 +185,7 @@
         </ul>
       </div>
 
-      <div class="card">
+      <div class="card surface">
         <h3>対応言語</h3>
         <ul>
           <li>C++</li>
@@ -183,7 +196,7 @@
         </ul>
       </div>
 
-      <div class="card">
+      <div class="card surface">
         <h3>対象</h3>
         <ul>
           <li>中学生以上</li>
@@ -200,31 +213,31 @@
     <h2>レッスンの流れ</h2>
 
     <div class="flow">
-      <div class="flow-item">
+      <div class="flow-item surface">
         <span>1</span>
         <h3>ご予約</h3>
         <p>
-            予約ボタンからレッスンをご予約ください。<br>
-            その後、メールにてご入金の案内を送付いたしますので、レッスンまでに銀行振込にてお支払いをお願いいたします。
-            ご入金の確認をもって予約確定となります。
+          予約ボタンからレッスンをご予約ください。<br>
+          その後、メールにてご入金の案内を送付いたしますので、レッスンまでに銀行振込にてお支払いをお願いいたします。
+          ご入金の確認をもって予約確定となります。
         </p>
       </div>
 
-      <div class="flow-item">
+      <div class="flow-item surface">
         <span>2</span>
         <h3>初回体験</h3>
         <p>
-            ヒアリングを行った後、現在のレベルに合わせた簡単なプログラミング体験を実施します。
-            継続レッスンをご希望の場合は、初回から複数回のレッスンを前提としたカリキュラムも可能です。
+          ヒアリングを行った後、現在のレベルに合わせた簡単なプログラミング体験を実施します。
+          継続レッスンをご希望の場合は、初回から複数回のレッスンを前提としたカリキュラムも可能です。
         </p>
       </div>
 
-      <div class="flow-item">
+      <div class="flow-item surface">
         <span>3</span>
         <h3>継続レッスン</h3>
         <p>
-            ヒアリングにて設定した目標に向け、課題・コードレビュー・講義・実践学習を組み合わせて進めます。
-            ご自身で取り組んでいる内容（自作のプログラム、学校の課題、制作物）があれば、それを題材に進めることも可能です。
+          ヒアリングにて設定した目標に向け、課題・コードレビュー・講義・実践学習を組み合わせて進めます。
+          ご自身で取り組んでいる内容（自作のプログラム、学校の課題、制作物）があれば、それを題材に進めることも可能です。
         </p>
       </div>
     </div>
@@ -235,7 +248,7 @@
   <div class="container">
     <h2>レッスン方法</h2>
 
-    <div class="card">
+    <div class="card surface">
       <ul>
         <li>
           Google Meet を使用し、オンライン会議にて画面共有しながら実施します。
@@ -254,7 +267,7 @@
   <div class="container">
     <h2>レッスン料金</h2>
 
-    <div class="price-box">
+    <div class="price-box surface">
       <p class="price">
         通常レッスン
         <strong>4,000円 / 60分</strong>
@@ -286,31 +299,30 @@
     <h2>よくある質問</h2>
 
     <div class="faq">
-      <div class="faq-item">
+      <div class="faq-item surface">
         <h3>Q. 初心者でも大丈夫ですか？</h3>
         <p>A. もちろんです。開発環境の構築や基本操作からサポートします。</p>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item surface">
         <h3>Q. 何から学べばよいか分かりません。</h3>
         <p>A. ヒアリング結果に基づいて、こちらからご提案します。</p>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item surface">
         <h3>Q. レッスン頻度は決まっていますか？</h3>
         <p>A. ご都合に合わせて柔軟に対応します。1回ごとの予約や、定期予約にも対応します。</p>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item surface">
         <h3>Q. 学校の課題を見てもらうことはできますか？</h3>
         <p>A. もちろんです。学校の授業理解や課題のサポートも行っています。</p>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item surface">
         <h3>Q. 支払い後のキャンセルや日程変更はできますか？</h3>
         <p>A. 日程変更は可能な限り対応いたします。キャンセル・変更をご希望の場合は、レッスン前日までにご連絡ください。未入金の場合、予約は確定していません。</p>
       </div>
-
     </div>
   </div>
 </section>
@@ -322,11 +334,11 @@
     <p>レッスン内容のご相談も歓迎しております。お気軽にご予約・お問い合わせください。</p>
 
     <div class="hero-buttons">
-      <a class="button primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1oMFq9wS3znJD91qp8JSfKwD3LoMNsMQNBw1Jx3tbOXKk782JvsL_dksaXFfuW8BPupAmnkvUB" target="_blank" rel="noopener">
+      <a class="button button--primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1oMFq9wS3znJD91qp8JSfKwD3LoMNsMQNBw1Jx3tbOXKk782JvsL_dksaXFfuW8BPupAmnkvUB" target="_blank" rel="noopener">
         レッスン予約
       </a>
 
-      <a class="button secondary" href="mailto:datsilho.ftw@gmail.com">
+      <a class="button button--secondary" href="mailto:datsilho.ftw@gmail.com">
         問い合わせ
       </a>
     </div>

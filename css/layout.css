@@ -1,0 +1,88 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header-inner {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-logo {
+  color: var(--blue-dark);
+  font-size: 20px;
+  font-weight: 900;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.site-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.site-nav a {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--blue);
+}
+
+.site-header-button {
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  color: #fff;
+  background: var(--blue);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+  padding: 110px 0 90px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow-lg);
+  z-index: -1;
+}
+
+.section {
+  padding: 82px 0;
+}
+
+.section.gray {
+  background: rgba(248, 250, 252, 0.9);
+}
+
+.contact {
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, var(--blue-dark), #111827);
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  color: #fff;
+  background: #111827;
+}
