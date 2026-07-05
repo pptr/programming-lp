@@ -1,13 +1,30 @@
+/* ==========================================================
+   NK Works
+   Components
+   ----------------------------------------------------------
+   ボタン・カード・料金・FAQなど再利用コンポーネント
+========================================================== */
+
+/* ========================================================
+   Button
+======================================================== */
+
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 160px;
-  padding: 13px 26px;
+  min-width: 180px;
+  padding: 14px 28px;
+  border: none;
   border-radius: var(--radius-pill);
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 800;
   text-decoration: none;
-  transition: 0.2s ease;
+  cursor: pointer;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    background var(--transition);
 }
 
 .button:hover {
@@ -15,48 +32,132 @@
 }
 
 .button--primary {
-  color: #fff;
-  background: linear-gradient(135deg, var(--blue), var(--blue-dark));
-  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.28);
+  color: #ffffff;
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue),
+      var(--blue-dark)
+    );
+  box-shadow: 0 14px 30px rgba(37, 99, 235, .24);
+}
+
+.button--primary:hover {
+  box-shadow: var(--shadow-hover);
 }
 
 .button--secondary {
   color: var(--blue-dark);
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #bfdbfe;
 }
 
+.button--secondary:hover {
+  border-color: var(--blue);
+}
+
+/* ========================================================
+   Hero Buttons
+======================================================== */
+
+.hero-actions,
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+/* ========================================================
+   Hero Card
+======================================================== */
+
+.hero-card {
+  padding: 34px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-lg);
+}
+
+.card-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.hero-card h2 {
+  margin-bottom: 18px;
+}
+
+.hero-card ul {
+  padding: 0;
+  list-style: none;
+}
+
+.hero-card li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 14px;
+}
+
+.hero-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+  font-weight: 900;
+}
+
+/* ========================================================
+   Surface
+======================================================== */
+
 .surface {
-  padding: 28px;
+  padding: 30px;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255,255,255,.94);
   box-shadow: var(--shadow-md);
 }
+
+/* ========================================================
+   Cards
+======================================================== */
 
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  margin-top: 30px;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.card {
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
 }
 
 .card h3 {
   color: var(--blue-dark);
 }
 
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 34px;
-}
+/* ========================================================
+   Flow
+======================================================== */
 
 .flow {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: 24px;
 }
 
 .flow-item {
@@ -65,60 +166,80 @@
 
 .flow-item span {
   display: inline-flex;
-  width: 42px;
-  height: 42px;
+  width: 46px;
+  height: 46px;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   border-radius: 50%;
   color: #ffffff;
-  background: var(--blue);
-  font-weight: 800;
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue),
+      var(--blue-dark)
+    );
+  font-weight: 900;
+  box-shadow:
+    0 8px 20px rgba(37,99,235,.28);
 }
 
+/* ========================================================
+   Price
+======================================================== */
+
 .price-box {
-  max-width: 680px;
+  max-width: 720px;
   margin: 0 auto;
   text-align: center;
 }
 
 .price,
 .first-price {
-  padding: 20px;
+  padding: 24px;
   border-radius: var(--radius-sm);
   background: var(--bg-soft);
 }
 
+.price {
+  margin-bottom: 18px;
+}
+
 .price strong {
   display: block;
-  margin-top: 4px;
-  font-size: 40px;
+  margin-top: 8px;
+  font-size: 42px;
   color: var(--blue);
 }
 
 .first-price strong {
   display: block;
-  margin-top: 4px;
-  font-size: 32px;
+  margin-top: 8px;
+  font-size: 34px;
   color: var(--blue-dark);
 }
 
+/* ========================================================
+   Campaign
+======================================================== */
+
 .campaign-box {
-  margin: 24px 0;
-  padding: 26px;
+  margin-top: 28px;
+  padding: 28px;
   border: 2px solid #fecaca;
-  border-radius: 22px;
+  border-radius: 24px;
   background: #fff1f2;
 }
 
 .campaign-title {
   display: inline-block;
-  margin-bottom: 10px;
-  padding: 4px 14px;
+  margin-bottom: 12px;
+  padding: 5px 16px;
   border-radius: var(--radius-pill);
-  color: #fff;
+  color: #ffffff;
   background: var(--red);
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 900;
 }
 
 .campaign-red {
@@ -129,38 +250,57 @@
 
 .campaign-red strong {
   display: block;
-  font-size: 28px;
+  margin-top: 4px;
+  font-size: 30px;
 }
 
 .campaign-red-large {
+  margin: 12px 0;
   color: var(--red);
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 900;
 }
 
-.small {
-  color: var(--muted);
-  font-size: 13px;
-}
+/* ========================================================
+   FAQ
+======================================================== */
 
 .faq {
   display: grid;
-  gap: 16px;
+  gap: 18px;
 }
 
 .faq-item {
-  padding: 24px;
+  padding: 26px;
+  border: 1px solid var(--border);
   border-radius: 20px;
   background: #ffffff;
-  border: 1px solid var(--border);
+  transition: box-shadow var(--transition);
+}
+
+.faq-item:hover {
+  box-shadow: var(--shadow-md);
 }
 
 .faq-item h3 {
   color: var(--blue-dark);
 }
 
+/* ========================================================
+   Utility
+======================================================== */
+
+.small {
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .contact .button--secondary {
   color: #ffffff;
-  border-color: #ffffff;
+  border-color: rgba(255,255,255,.6);
   background: transparent;
+}
+
+.contact .button--secondary:hover {
+  background: rgba(255,255,255,.08);
 }

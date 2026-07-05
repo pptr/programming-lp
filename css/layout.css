@@ -1,14 +1,26 @@
+/* ==========================================================
+   NK Works
+   Layout
+   ----------------------------------------------------------
+   ヘッダー、ヒーロー、セクション、フッターなどの
+   大枠レイアウト
+========================================================== */
+
+/* ========================================================
+   Header
+======================================================== */
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.9);
   border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(14px);
 }
 
 .site-header-inner {
-  height: 68px;
+  min-height: var(--header-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,14 +37,16 @@
 
 .site-nav {
   display: flex;
-  gap: 24px;
+  align-items: center;
+  gap: 26px;
 }
 
 .site-nav a {
   color: var(--text);
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 800;
   text-decoration: none;
+  transition: color var(--transition-fast);
 }
 
 .site-nav a:hover {
@@ -40,49 +54,116 @@
 }
 
 .site-header-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 9px 18px;
   border-radius: var(--radius-pill);
-  color: #fff;
+  color: #ffffff;
   background: var(--blue);
   font-size: 14px;
   font-weight: 800;
   text-decoration: none;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
+
+.site-header-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.22);
+}
+
+/* ========================================================
+   Header Actions
+======================================================== */
+
+.site-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-header-button--secondary {
+  color: var(--blue-dark);
+  background: #ffffff;
+  border: 1px solid #bfdbfe;
+}
+
+.site-header-button--secondary:hover {
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.14);
+}
+
+/* ========================================================
+   Hero
+======================================================== */
 
 .hero {
   position: relative;
-  padding: 110px 0 90px;
-  text-align: center;
+  padding: 64px 0 64px;
   overflow: hidden;
+  text-align: left;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 24px;
-  border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: var(--shadow-lg);
   z-index: -1;
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(239, 246, 255, 0.88));
+  box-shadow: var(--shadow-lg);
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 720px;
+}
+
+/* ========================================================
+   Sections
+======================================================== */
+
 .section {
-  padding: 82px 0;
+  padding: 64px 0;
 }
 
 .section.gray {
-  background: rgba(248, 250, 252, 0.9);
+  background: rgba(248, 250, 252, 0.92);
 }
 
+/* ========================================================
+   Contact CTA
+======================================================== */
+
 .contact {
+  color: #ffffff;
   text-align: center;
-  color: #fff;
-  background: linear-gradient(135deg, var(--blue-dark), #111827);
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.32), transparent 360px),
+    linear-gradient(135deg, var(--blue-dark), #111827);
 }
+
+.contact h2 {
+  color: #ffffff;
+}
+
+.contact p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* ========================================================
+   Footer
+======================================================== */
 
 footer {
   padding: 24px;
+  color: #ffffff;
   text-align: center;
-  color: #fff;
   background: #111827;
 }
