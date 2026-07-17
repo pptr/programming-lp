@@ -1,0 +1,451 @@
+/* ==========================================================
+   NK Works
+   Pages
+   ----------------------------------------------------------
+   このページ固有の見た目・装飾
+========================================================== */
+
+/* ========================================================
+   Hero
+======================================================== */
+
+.hero-label {
+  display: inline-block;
+  margin: 0 0 18px;
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  color: var(--blue-dark);
+  background: var(--blue-light);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.hero-catch {
+  max-width: 720px;
+  margin: 26px 0 0;
+  color: var(--blue-dark);
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 900;
+  line-height: 1.55;
+}
+
+.hero-description {
+  max-width: 760px;
+  margin: 24px 0 0;
+  color: var(--text-soft);
+  font-size: 18px;
+}
+
+
+/* ========================================================
+   Campaign Top
+======================================================== */
+
+.campaign-top {
+  padding: 36px 0;
+  color: #ffffff;
+  text-align: center;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.22), transparent 280px),
+    linear-gradient(135deg, #ef4444, #b91c1c);
+}
+
+.campaign-top h2 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: 26px;
+}
+
+.campaign-large {
+  margin: 0 0 8px;
+  font-size: clamp(24px, 5vw, 42px);
+  font-weight: 900;
+}
+
+.old-price {
+  opacity: 0.78;
+  text-decoration: line-through;
+}
+
+.sale-price strong {
+  font-size: 1.25em;
+  color: #fff7ed;
+}
+
+.campaign-note {
+  margin: 10px 0 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* ========================================================
+   Profile
+======================================================== */
+
+/* ========================================================
+   Instructor Profile
+======================================================== */
+
+.instructor-profile {
+  padding: 0;
+  overflow: hidden;
+}
+
+.instructor-main {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 44px;
+  align-items: center;
+  padding: 40px;
+}
+
+.instructor-image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instructor-image {
+  display: block;
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  box-shadow: var(--shadow-md);
+}
+
+.instructor-content {
+  min-width: 0;
+}
+
+.instructor-name {
+  margin: 4px 0 8px;
+  color: var(--blue-dark);
+  font-size: clamp(24px, 3vw, 32px);
+}
+
+.instructor-role {
+  margin-bottom: 20px;
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.instructor-content p:last-child {
+  margin-bottom: 0;
+}
+
+.instructor-career {
+  padding: 30px 40px 34px;
+  border-top: 1px solid var(--border);
+  background: rgba(248, 250, 252, 0.82);
+}
+
+.instructor-career h3 {
+  margin-bottom: 20px;
+  color: var(--blue-dark);
+  font-size: 20px;
+}
+
+.career-box {
+  position: relative;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.career-box::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background:
+    linear-gradient(
+      180deg,
+      var(--blue),
+      var(--blue-dark)
+    );
+}
+
+.career-box h3 {
+  margin-bottom: 18px;
+  padding-left: 6px;
+}
+
+.career-list {
+  display: grid;
+  gap: 0;
+}
+
+.career-item {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 18px;
+  align-items: start;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.career-item:first-child {
+  padding-top: 0;
+}
+
+.career-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.career-year {
+  display: inline-flex;
+  width: fit-content;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  color: var(--blue-dark);
+  background: var(--blue-light);
+  font-size: 14px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.career-item p {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+/* ========================================================
+   Lesson / Method
+======================================================== */
+
+#lesson > .container > p {
+  color: var(--text-soft);
+  font-size: 17px;
+}
+
+#method li {
+  margin-bottom: 12px;
+}
+
+/* ========================================================
+   Voice / Support Examples
+   ----------------------------------------------------------
+   実際の受講者コメントではなく例として使う場合は、
+   HTML側の見出しを「サポート例」などにする
+======================================================== */
+
+.voice-note {
+  max-width: 780px;
+  margin-bottom: 0;
+  color: var(--text-soft);
+}
+
+
+
+/* ========================================================
+   consultation
+======================================================== */
+#consultation .cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#consultation .card {
+  display: flex;
+  flex-direction: column;
+}
+
+#consultation .card .button {
+  width: fit-content;
+  margin-top: auto;
+}
+
+.consultation-note {
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+/* ========================================================
+   Contact
+======================================================== */
+
+.contact .hero-buttons {
+  justify-content: center;
+}
+
+.contact a {
+  word-break: break-word;
+}
+
+
+/* ========================================================
+   FAQ
+======================================================== */
+
+.faq {
+  display: grid;
+  gap: 18px;
+}
+
+.faq-item {
+  padding: 26px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: #ffffff;
+  transition: box-shadow var(--transition);
+}
+
+.faq-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.faq-item h2 {
+  font-size: clamp(16px, 3vw, 20px);
+}
+
+.faq-item h3 {
+  color: var(--blue-dark);
+}
+
+/* ========================================================
+   Top Hero Visual
+======================================================== */
+
+.hero-visual {
+  position: relative;
+  min-height: 500px;
+  isolation: isolate;
+}
+
+.hero-photo {
+  position: absolute;
+  overflow: hidden;
+  margin: 0;
+  border: 5px solid rgba(255, 255, 255, 0.96);
+  background: #ffffff;
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.16);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-photo--main {
+  inset: 18px 0 110px 70px;
+  z-index: 1;
+  border-radius: 30px;
+}
+
+.hero-photo--main img {
+  object-position: 58% 50%;
+}
+
+.hero-photo--sub {
+  z-index: 2;
+  width: 45%;
+  height: 38%;
+  border-radius: 22px;
+}
+
+.hero-photo--online {
+  left: 0;
+  bottom: 18px;
+}
+
+.hero-photo--online img {
+  object-position: 44% 50%;
+}
+
+.hero-photo--student {
+  right: 6px;
+  bottom: 0;
+}
+
+.hero-photo--student img {
+  object-position: 55% 42%;
+}
+
+.hero-visual-badge {
+  position: absolute;
+  top: 0;
+  right: -12px;
+  z-index: 3;
+  display: grid;
+  gap: 3px;
+  max-width: 250px;
+  padding: 14px 18px;
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(12px);
+}
+
+.hero-visual-badge span {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+.hero-visual-badge strong {
+  color: var(--blue-dark);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* ========================================================
+   Lesson Style Summary
+======================================================== */
+
+.lesson-style {
+  position: relative;
+  z-index: 2;
+  padding: 0 0 42px;
+  background: #ffffff;
+}
+
+.lesson-style-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.lesson-style-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.lesson-style-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.lesson-style-item h2 {
+  margin: 1px 0 6px;
+  color: var(--blue-dark);
+  font-size: 18px;
+}
+
+.lesson-style-item p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 14px;
+  line-height: 1.7;
+}

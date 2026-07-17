@@ -1,0 +1,474 @@
+/* ==========================================================
+   NK Works
+   Components
+   ----------------------------------------------------------
+   ボタン・カード・料金・FAQなど再利用コンポーネント
+========================================================== */
+
+/* ========================================================
+   Button
+======================================================== */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: var(--radius-pill);
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    background var(--transition);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button--primary {
+  color: #ffffff;
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue),
+      var(--blue-dark)
+    );
+  box-shadow: 0 14px 30px rgba(37, 99, 235, .24);
+}
+
+.button--primary:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.button--secondary {
+  color: var(--blue-dark);
+  background: #ffffff;
+  border: 1px solid #bfdbfe;
+}
+
+.button--secondary:hover {
+  border-color: var(--blue);
+}
+
+/* ========================================================
+   Hero Buttons
+======================================================== */
+
+.hero-actions,
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+/* ========================================================
+   Hero Card
+======================================================== */
+
+.hero-card {
+  padding: 34px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-lg);
+}
+
+.card-label {
+  display: inline-block;
+  margin-bottom: 4px;
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.hero-card h2 {
+  margin-bottom: 18px;
+}
+
+.hero-card ul {
+  padding: 0;
+  list-style: none;
+}
+
+.hero-card li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 14px;
+}
+
+.hero-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+  font-weight: 900;
+}
+
+/* ========================================================
+   Surface
+======================================================== */
+
+.surface {
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,.94);
+  box-shadow: var(--shadow-md);
+}
+
+/* ========================================================
+   Cards
+======================================================== */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.card {
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card h3 {
+  color: var(--blue-dark);
+}
+
+/* ========================================================
+   Notes
+======================================================== */
+
+.note {
+  margin-top: 24px;
+  padding: 24px 30px;
+  border-left: 4px solid var(--blue);
+  background: rgba(239, 246, 255, 0.72);
+}
+
+.note h3 {
+  color: var(--blue-dark);
+}
+
+/* ========================================================
+   Page Navigation
+   ページ内テキストナビゲーション
+======================================================== */
+
+.page-nav-wrap {
+  width: 100%;
+  border-top: 1px solid rgba(37, 99, 235, 0.16);
+  border-bottom: 1px solid rgba(37, 99, 235, 0.16);
+  background: rgba(255, 255, 255, 0.38);
+  backdrop-filter: blur(10px);
+}
+
+.page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+.page-nav a {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+
+  color: var(--blue-dark);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+/* 項目間の縦線 */
+.page-nav a + a::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 0;
+  width: 1px;
+  background: rgba(37, 99, 235, 0.16);
+}
+
+/* ホバー時の下線 */
+.page-nav a::after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  bottom: 0;
+  left: 16px;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  border-radius: 3px 3px 0 0;
+  background: var(--blue);
+  transition: transform var(--transition-fast);
+}
+
+.page-nav a:hover,
+.page-nav a:focus-visible {
+  color: var(--blue);
+  border: 0;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.32);
+  box-shadow: none;
+}
+
+.page-nav a:hover::after,
+.page-nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* ========================================================
+   Flow
+======================================================== */
+
+.flow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.flow-item {
+  position: relative;
+}
+
+.flow-item span {
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  color: #ffffff;
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue),
+      var(--blue-dark)
+    );
+  font-weight: 900;
+  box-shadow:
+    0 8px 20px rgba(37,99,235,.28);
+}
+
+/* ========================================================
+   Pricing
+======================================================== */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.price-box {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 28px;
+  text-align: center;
+}
+
+.price-box h3 {
+  margin: 6px 0 12px;
+  font-size: 18px;
+}
+
+.price-area {
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  border-radius: var(--radius-lg);
+  background: rgba(248, 250, 252, 0.96);
+}
+
+.regular-price {
+  margin-bottom: 6px;
+  color: var(--text-muted);
+  font-size: 15px;
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+
+.current-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  color: var(--blue);
+}
+
+.current-price strong {
+  font-size: clamp(36px, 5vw, 52px);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.current-price span {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.price-features {
+  margin: 0;
+  padding-left: 1.4em;
+  text-align: left;
+}
+
+.price-features li {
+  line-height: 1.4;
+}
+
+.price-features li + li {
+  margin-top: 0px;
+}
+
+.price-box .small {
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-box {
+    padding: 24px;
+  }
+
+  .price-area {
+    padding: 24px 16px;
+  }
+}
+
+/* ========================================================
+   Campaign
+======================================================== */
+
+.campaign-box {
+  margin-top: 28px;
+  padding: 28px;
+  border: 2px solid #fecaca;
+  border-radius: 24px;
+  background: #fff1f2;
+}
+
+.campaign-title {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 16px;
+  border-radius: var(--radius-pill);
+  color: #ffffff;
+  background: var(--red);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.campaign-red {
+  color: var(--red-dark);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.campaign-red strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 30px;
+}
+
+.campaign-red-large {
+  margin: 12px 0;
+  color: var(--red);
+  font-size: 38px;
+  font-weight: 900;
+}
+
+/* ========================================================
+   FAQ
+======================================================== */
+
+.faq {
+  display: grid;
+  gap: 18px;
+}
+
+.faq-item {
+  padding: 26px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: #ffffff;
+  transition: box-shadow var(--transition);
+}
+
+.faq-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.faq-item h3 {
+  color: var(--blue-dark);
+}
+
+/* ========================================================
+   Utility
+======================================================== */
+
+.small {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.contact .button {
+  min-width: 220px;
+  font-size: 18px;
+}
+
+.contact .button--secondary {
+  color: #ffffff;
+  border-color: rgba(255,255,255,.6);
+  background: transparent;
+}
+
+.contact .button--secondary:hover {
+  background: rgba(255,255,255,.08);
+}
+
+.contact .hero-actions {
+    justify-content: center;
+}

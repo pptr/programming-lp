@@ -1,445 +1,333 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta 
-    name="description"
-    content="板橋区を拠点にオンラインでプログラミングレッスンを実施。現役ソフトウェア開発者が丁寧に指導します。板橋区内は訪問レッスンにも対応。"
-  />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="板橋区を拠点にオンラインでマンツーマンのプログラミングレッスンを実施。初心者、学生、社会人に対応します。">
   <title>板橋区のオンラインプログラミングレッスン | NK Works</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+
 <header class="site-header">
   <div class="container site-header-inner">
-    <a class="site-logo" href="#">NK Works</a>
+    <a class="site-logo" href="index.html" aria-label="NK Works トップページ">
+      <img
+        src="images/nkworks_logo.png"
+        alt="NK Works"
+        class="site-logo-image"
+      >
+    </a>
 
     <nav class="site-nav" aria-label="メインナビゲーション">
-      <a href="#profile">講師情報</a>
-      <a href="#lesson">レッスンの詳細</a>
-      <a href="#price">料金について</a>
-      <a href="#faq">よくある質問</a>
+      <a href="lesson.html">レッスン詳細</a>
+      <a href="guide.html">受講案内・料金</a>
+      <a href="profile.html">講師情報</a>
+      <a href="faq.html">よくある質問</a>
     </nav>
 
     <div class="site-header-actions">
-      <a
-        class="site-header-button"
-        href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1oMFq9wS3znJD91qp8JSfKwD3LoMNsMQNBw1Jx3tbOXKk782JvsL_dksaXFfuW8BPupAmnkvUB"
-        target="_blank"
-        rel="noopener"
-      >
-        レッスン予約
+      <a class="site-header-button"
+         href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1oMFq9wS3znJD91qp8JSfKwD3LoMNsMQNBw1Jx3tbOXKk782JvsL_dksaXFfuW8BPupAmnkvUB"
+         target="_blank"
+         rel="noopener">
+        ご予約
       </a>
 
-      <a
-        class="site-header-button site-header-button--secondary"
-        href="https://forms.gle/MxousDhvkLwsotks6"
-        target="_blank"
-        rel="noopener"
-      >
-        問い合わせ
+      <a class="site-header-button site-header-button--secondary"
+         href="https://forms.gle/MxousDhvkLwsotks6"
+         target="_blank"
+         rel="noopener">
+        お問い合わせ
       </a>
     </div>
   </div>
 </header>
 
+
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-text">
-      <p class="hero-label">Online Programming Lesson</p>
+      <p class="hero-label">無料相談・体験レッスン受付中</p>
 
-      <h1>
-        現役ソフトウェア開発者による<br>
-        プログラミングレッスン
+      <h1 class="hero-title">
+        <img
+          src="images/nkworks_logo.png"
+          alt="NK Works"
+          class="hero-logo"
+        >
+        <span class="hero-service-name">
+          オンラインプログラミングレッスン
+        </span>
       </h1>
 
       <p class="hero-catch">
-        初心者、学生、社会人まで、一人ひとりの目標に向けて基礎から実践までカバーしたオーダーメイドレッスンを行います。
+        現役ソフトウェア開発者による<br>
+        一人ひとりに合わせたオーダーメイドレッスン
+      </p>
+
+      <ul class="hero-points" aria-label="レッスンの特徴">
+        <li>完全マンツーマン</li>
+        <li>未経験・初心者歓迎</li>
+        <li>中学生以上、学生・社会人不問</li>
+        <li>板橋区内は訪問レッスン可</li>
+      </ul>
+
+      <div class="hero-actions">
+        <a class="button button--primary"
+          href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1oMFq9wS3znJD91qp8JSfKwD3LoMNsMQNBw1Jx3tbOXKk782JvsL_dksaXFfuW8BPupAmnkvUB"
+          target="_blank"
+          rel="noopener">
+          無料相談・体験を予約する
+        </a>
+        <a class="button button--secondary" href="lesson.html">
+          レッスン詳細を見る
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-label="対面・オンラインのレッスン風景">
+      <figure class="hero-photo hero-photo--main">
+        <img src="images/top_001.png" alt="講師が受講者のパソコン画面を見ながらプログラミングを指導する様子">
+      </figure>
+
+      <figure class="hero-photo hero-photo--sub hero-photo--online">
+        <img src="images/top_003.png" alt="ヘッドセットを着用してオンラインレッスンを受講する様子">
+      </figure>
+
+      <figure class="hero-photo hero-photo--sub hero-photo--student">
+        <img src="images/top_002.png" alt="パソコンでプログラミングを学ぶ受講者の様子">
+      </figure>
+
+      <div class="hero-visual-badge">
+        <span>1対1で丁寧にサポート</span>
+        <strong>オンライン・訪問対応</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="campaign-top" aria-labelledby="campaign-title">
+  <div class="container">
+    <div class="campaign-card">
+
+      <div class="campaign-card-intro">
+        <p class="campaign-label">OPEN CAMPAIGN</p>
+
+        <h2 id="campaign-title">
+          オープン記念キャンペーン
+        </h2>
+
+        <p class="campaign-description">
+          開講を記念して、期間限定の特別価格でご案内しています。
+        </p>
+      </div>
+
+      <div class="campaign-prices">
+
+        <div class="campaign-price-item">
+          <p class="campaign-price-name">通常レッスン</p>
+
+          <div class="campaign-price-value">
+            <span class="old-price">4,000円</span>
+            <span class="campaign-arrow" aria-hidden="true">→</span>
+            <strong class="sale-price">3,000円</strong>
+          </div>
+
+          <p class="campaign-price-unit">60分・マンツーマン</p>
+        </div>
+
+        <div class="campaign-divider" aria-hidden="true"></div>
+
+        <div class="campaign-price-item campaign-price-item--trial">
+          <p class="campaign-price-name">体験レッスン</p>
+
+          <div class="campaign-price-value">
+            <span class="old-price">2,000円</span>
+            <span class="campaign-arrow" aria-hidden="true">→</span>
+            <strong class="sale-price">無料</strong>
+          </div>
+
+          <p class="campaign-price-unit">初回限定</p>
+        </div>
+
+      </div>
+
+      <div class="campaign-action">
+        <a
+          class="campaign-button"
+          href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1oMFq9wS3znJD91qp8JSfKwD3LoMNsMQNBw1Jx3tbOXKk782JvsL_dksaXFfuW8BPupAmnkvUB"
+          target="_blank"
+          rel="noopener"
+        >
+          無料相談・体験を予約する
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section top-features">
+  <div class="container">
+
+    <div class="feature-cards">
+
+      <article class="feature-card">
+        <div class="feature-card-label" aria-hidden="true">
+          <span>POINT</span>
+          <strong>01</strong>
+        </div>
+
+        <h2>一人ひとりに合わせた内容</h2>
+
+        <p>
+          現在の理解度や目的、取り組みたい題材を丁寧にヒアリングし、
+          独自教材をベースにレッスン内容を組み立てます。
+          基礎学習、学校・受験対策、技術力向上、転職対策など、
+          一人ひとりの目標に合わせて柔軟に対応します。
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-card-label" aria-hidden="true">
+          <span>POINT</span>
+          <strong>02</strong>
+        </div>
+
+        <h2>実践的なプログラミング</h2>
+
+        <p>
+          簡易的なビジュアル教材だけでなく、
+          実際のソフトウェア開発で使用されるプログラミング言語を扱います。
+          文法の暗記にとどまらず、将来にも役立つ実践的な技術と
+          問題解決力を身につけます。
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-card-label" aria-hidden="true">
+          <span>POINT</span>
+          <strong>03</strong>
+        </div>
+
+        <h2>作りながら学ぶ</h2>
+
+        <p>
+          アプリやゲームなどの制作を通じて、
+          プログラムを最後まで組み上げる力を養います。
+          コードの読みやすさや修正しやすさ、
+          設計の考え方まで現役開発者の視点でフィードバックします。
+        </p>
+
+        <p class="feature-card-note">
+          ※ 学校の授業補助など、受講目的に応じて内容を調整します。
+        </p>
+      </article>
+
+    </div>
+
+    <div class="section-link section-link--center">
+      <a class="button button--secondary" href="lesson.html">
+        レッスン内容を詳しく見る
+      </a>
+      <a class="button button--secondary" href="guide.html">
+        受講案内・料金を見る
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- CTA -->
+  <section class="section contact">
+    <div class="container">
+
+      <h2>
+        まずはお気軽に無料相談・体験レッスンをお申し込みください
+      </h2>
+
+      <p>
+        学びたい内容が明確に決まっていない場合も、
+        現在の状況を伺ったうえで、
+        おすすめの学習内容をご提案します。
       </p>
 
       <div class="hero-actions">
+
         <a
           class="button button--primary"
           href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1oMFq9wS3znJD91qp8JSfKwD3LoMNsMQNBw1Jx3tbOXKk782JvsL_dksaXFfuW8BPupAmnkvUB"
           target="_blank"
           rel="noopener"
         >
-          レッスンを予約する
+          ご予約
         </a>
 
-        <a class="button button--secondary" href="#lesson">
-          レッスン内容を見る
+        <a
+          class="button button--secondary"
+          href="https://forms.gle/MxousDhvkLwsotks6"
+          target="_blank"
+          rel="noopener"
+        >
+          お問い合わせ
         </a>
+
       </div>
     </div>
-
-    <div class="hero-card">
-      <p class="card-label">LESSON STYLE</p>
-      <h2>完全オンライン対応</h2>
-      <ul>
-        <li>初心者歓迎</li>
-        <li>1回60分から相談可</li>
-        <li>板橋区内は訪問レッスン可</li>
-        <li>C / C++ / Java / PHP など各言語に対応</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="campaign-top">
-  <div class="container">
-    <h2>オープン記念キャンペーン</h2>
-
-    <p class="campaign-large">
-      <span class="old-price">通常 4,000円</span>
-      →
-      <span class="sale-price">7・8月限定 <strong>3,000円</strong></span>
-    </p>
-
-    <p>初回体験レッスンは <strong>2,000円</strong></p>
-
-    <p class="campaign-note">
-      ※キャンペーン価格は通常レッスンのみ対象です。初回体験は一律2,000円となります。
-    </p>
-  </div>
-</section>
-
-<main>
-<section class="section" id="features">
-  <div class="container">
-    <h2>こんな方におすすめ</h2>
-
-    <div class="cards">
-      <div class="card surface">
-        <h3>プログラミングを始めたい</h3>
-        <p>未経験・初心者の方でも、環境構築や基本操作からサポートします。</p>
-      </div>
-
-      <div class="card surface">
-        <h3>学校の授業についていきたい</h3>
-        <p>授業内容や課題の理解をサポートし、基礎から丁寧に整理します。</p>
-      </div>
-
-      <div class="card surface">
-        <h3>将来エンジニアを目指したい</h3>
-        <p>文法だけでなく、実務で役立つ考え方・設計力まで学べます。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section gray">
-  <div class="container">
-    <h2>レッスンの特徴</h2>
-
-    <div class="cards">
-      <div class="card surface">
-        <h3>一人ひとりに合わせたマンツーマン指導</h3>
-        <p>
-          現状と目標を丁寧にヒアリングし、一人ひとりに合わせてオーダーメイドでレッスン内容を組み上げ、マンツーマンで指導します。
-        </p>
-      </div>
-
-      <div class="card surface">
-        <h3>本物のプログラミングを学ぶ</h3>
-        <p>
-          多くの教室では簡易化されたビジュアル教材や文法学習が中心です。
-          本レッスンでは、実際のソフトウェア開発で使用される言語を用い、
-          設計やコードの考え方など、実践的なスキルを身につけます。
-        </p>
-      </div>
-
-      <div class="card surface">
-        <h3>作りながら学ぶ実践型レッスン</h3>
-        <p>
-          文法を覚えるだけではなく、ミニゲームやアプリ制作など実際に作品を作りながら学びます。
-          書いたコードを一緒に見直し、改善点をフィードバックすることで、
-          実務で有用な考え方、設計力までカバーします。
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="profile">
-  <div class="container">
-    <h2>講師プロフィール</h2>
-
-    <div class="career-box surface">
-      <h3>経歴</h3>
-
-      <div class="career-list">
-        <div class="career-item">
-          <span class="career-year">2016〜2018</span>
-          <p>大学研究室で教育用システム開発・学生向け講義アシスタント</p>
-        </div>
-        <div class="career-item">
-          <span class="career-year">2018〜2025</span>
-          <p>富士通グループにて通信システムや組み込みシステムアプリ開発に従事</p>
-        </div>
-        <div class="career-item">
-          <span class="career-year">2025〜現在</span>
-          <p>個人ソフトウェアエンジニア兼IT講師</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="profile-box surface">
-      <p>
-        これまで10年以上ソフトウェア開発に携わり、会社や大学で多くの人がプログラミングにつまずき、
-        「自分には向いていない」と諦めてしまう姿を数多く見てきました。
-        プログラミングは、学び方が大切な分野だと考えています。
-        つまずきを一つずつ解消し、プログラミングを楽しめる人を一人でも増やしたいという思いでレッスンを行っています。
-      </p>
-
-      <p>
-        現在はAIの発展により、コード例やエラーの原因を簡単に調べられる時代になりました。
-        しかし、実務で求められるのは、動くコードを書くことだけではなく、「なぜその設計にするのか」「どう考えて問題を解決するのか」という力です。
-        レッスンでは、AIも活用しながら、将来も役立つ考え方や実践的なプログラミングスキルを身につけられるよう、一人ひとりに合わせて丁寧にサポートします。
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="section gray" id="lesson">
-  <div class="container">
-    <h2>レッスン内容</h2>
-
-    <p>
-      初回レッスン時に丁寧にヒアリングを行い、現在のレベル・学習目的・学びたい内容に応じて、
-      オーダーメイドでレッスン内容を組み上げます。
-    </p>
-
-    <p>
-      レッスンでは、NK Works独自教材を用い、講義と演習を通じて基本文法の理解を深めます。
-      その後は一人ひとり設定した目標制作物をレッスンを通じて作り上げていき、その過程で実践スキルの習得を目指します。
-    </p>
-
-    <div class="cards">
-      <div class="card surface">
-        <h3>対応内容</h3>
-        <ul>
-          <li>学校の授業・課題</li>
-          <li>プログラミング基礎</li>
-          <li>オブジェクト指向設計</li>
-          <li>アルゴリズム</li>
-          <li>コードレビュー</li>
-          <li>ゲーム制作</li>
-          <li>就職・転職対策</li>
-        </ul>
-      </div>
-
-      <div class="card surface">
-        <h3>対応言語</h3>
-        <ul>
-          <li>C++</li>
-          <li>C</li>
-          <li>Java</li>
-          <li>PHP</li>
-          <li>その他相談可</li>
-        </ul>
-      </div>
-
-      <div class="card surface">
-        <h3>対象</h3>
-        <ul>
-          <li>中学生以上</li>
-          <li>学生・社会人不問</li>
-          <li>未経験・初心者歓迎</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="flow">
-  <div class="container">
-    <h2>レッスンの流れ</h2>
-
-    <div class="flow">
-      <div class="flow-item surface">
-        <span>1</span>
-        <h3>ご予約・お問い合わせ</h3>
-        <p>
-          予約ボタンからレッスンをご予約ください。<br>
-          その後、メールにてご入金の案内を送付いたしますので、レッスンまでに銀行振込にてお支払いをお願いいたします。
-          ご入金の確認をもって予約確定となります。
-        </p>
-        <p>
-          不明点や事前に相談したい事項がございましたら、お問い合わせボタンからお気軽にご連絡ください。
-        </p>
-      </div>
-
-      <div class="flow-item surface">
-        <span>2</span>
-        <h3>初回体験</h3>
-        <p>
-          ヒアリングを行った後、説明を交えながらプログラミング体験を実施します。
-          ヒアリング結果に応じて体験内容を調整しますので、初心者から経験者まで対応しております。
-          体験の最後に、継続レッスンの説明等を行います。
-        </p>
-      </div>
-
-      <div class="flow-item surface">
-        <span>3</span>
-        <h3>継続レッスン</h3>
-        <p>
-          ヒアリングにて設定した目標に向け、独自教材による講義・実践学習や制作課題・コードレビューを組み合わせて進めます。
-          ご自身で取り組んでいる内容（自作のプログラム、学校の課題、制作物）があれば、それを題材に進めることも可能です。
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section gray" id="method">
-  <div class="container">
-    <h2>レッスン方法</h2>
-
-    <div class="card surface">
-      <ul>
-        <li>
-          Google Meet を使用し、オンライン会議にて画面共有しながら実施します。
-          参加用URLは予約時に自動送信されますが、ご入金確認後に予約確定となります。
-        </li>
-        <li>Discordを用いたレッスンも可能です。予約後に送信される案内メールにご返信ください。</li>
-        <li>開発環境がない場合は、Visual Studio Codeをベースに環境構築からサポートします。</li>
-        <li>東京都板橋区内に限り、訪問レッスンも対応可能です。（交通費 一律1,000円）ご希望の場合は予約後に送信される案内メールにご返信ください。</li>
-        <li>基本的にはWindows搭載パソコンでの受講を推奨しています。Macをご利用の場合は事前にご相談ください。</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="price">
-  <div class="container">
-    <h2>レッスン料金</h2>
-
-    <div class="price-box surface">
-      <p class="price">
-        通常レッスン
-        <strong>4,000円 / 60分</strong>
-      </p>
-
-      <p class="first-price">
-        初回体験
-        <strong>2,000円</strong>
-      </p>
-
-      <div class="campaign-box">
-        <p class="campaign-title">オープン記念</p>
-
-        <p class="campaign-red">
-          7・8月限定
-          <strong>通常レッスン 1,000円OFF</strong>
-        </p>
-
-        <p class="campaign-red-large">4,000円 → 3,000円</p>
-
-        <p class="small">※初回体験は一律2,000円となります。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section gray" id="voice">
-  <div class="container">
-    <h2>受講者の声</h2>
-
-    <div class="cards">
-      <div class="card surface">
-        <p>
-          画面共有で一つずつ解説してもらえたので、初めてでもスムーズに始められました。
-          何ができるようになりたいかをしっかり聞いてもらえて、それに合ったレッスンを進めてもらえたのが良かったです。
-        </p>
-        <p class="small">学生</p>
-      </div>
-
-      <div class="card surface">
-        <p>
-          ただ文法を教えてもらうだけでなく、実例をもとに解説してもらえるのが特にわかりやすかったです。
-          課題のミニゲーム作りもレッスンの度に機能が増えていって楽しく続けられました。
-        </p>
-        <p class="small">学生</p>
-      </div>
-
-      <div class="card surface">
-        <p>
-          動けばよいコードから、読みやすく修正しやすいコードへ改善する視点を学べました。
-          実務的なコードレビューを行ってもらえて、自分に足りない観点がわかりやすかったです。
-        </p>
-        <p class="small">社会人</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="faq">
-  <div class="container">
-    <h2>よくある質問</h2>
-
-    <div class="faq">
-      <div class="faq-item surface">
-        <h3>Q. 初心者でも大丈夫ですか？</h3>
-        <p>A. もちろんです。開発環境の構築や基本操作からサポートします。</p>
-      </div>
-
-      <div class="faq-item surface">
-        <h3>Q. 何から学べばよいか分かりません。</h3>
-        <p>A. ヒアリング結果に基づいて、こちらからご提案します。</p>
-      </div>
-
-      <div class="faq-item surface">
-        <h3>Q. レッスン頻度は決まっていますか？</h3>
-        <p>A. ご都合に合わせて柔軟に対応します。1回ごとの予約や、定期予約にも対応します。</p>
-      </div>
-
-      <div class="faq-item surface">
-        <h3>Q. 学校の課題を見てもらうことはできますか？</h3>
-        <p>A. もちろんです。学校の授業理解や課題のサポートも行っています。</p>
-      </div>
-
-      <div class="faq-item surface">
-        <h3>Q. 支払い後のキャンセルや日程変更はできますか？</h3>
-        <p>A. 日程変更は可能な限り対応いたします。キャンセル・変更をご希望の場合は、レッスン前日までにご連絡ください。未入金の場合、予約は確定していません。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section contact" id="contact">
-  <div class="container">
-    <h2>ご予約・お問い合わせ</h2>
-
-    <p>レッスン内容のご相談も歓迎しております。お気軽にご予約・お問い合わせください。</p>
-
-    <div class="hero-buttons">
-      <a
-        class="button button--primary"
-        href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1oMFq9wS3znJD91qp8JSfKwD3LoMNsMQNBw1Jx3tbOXKk782JvsL_dksaXFfuW8BPupAmnkvUB"
-        target="_blank"
-        rel="noopener"
-      >
-        レッスン予約
-      </a>
-
-      <a
-        class="button button--secondary"
-        href="https://forms.gle/MxousDhvkLwsotks6"
-        target="_blank"
-        rel="noopener"
-      >
-        問い合わせ
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
+  
 </main>
 
-<footer>
-  ©2026 NK Works
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <h3>NK Works</h3>
+      <p>
+        板橋区を拠点とするプログラミングレッスン<br>
+        現役ソフトウェア開発者によるマンツーマン指導
+      </p>
+
+      <div class="footer-info">
+        <p>
+          <strong>営業時間</strong>
+          水〜日: 9:00〜21:00
+        </p>
+        <p>
+          <strong>定休日</strong>
+          月・火
+        </p>
+      </div>
+    </div>
+
+    <nav class="footer-nav">
+      <h3>MENU</h3>
+
+      <a href="lesson.html">レッスン詳細</a>
+      <a href="guide.html">受講案内・料金</a>
+      <a href="profile.html">講師情報</a>
+      <a href="faq.html">よくある質問</a>
+      <a
+        href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1oMFq9wS3znJD91qp8JSfKwD3LoMNsMQNBw1Jx3tbOXKk782JvsL_dksaXFfuW8BPupAmnkvUB"
+        target="_blank"
+      >
+        ご予約
+      </a>
+      <a
+        href="https://forms.gle/MxousDhvkLwsotks6"
+        target="_blank"
+      >
+        お問い合わせ
+      </a>
+    </nav>
+  </div>
+
+  <div class="footer-bottom">
+    ©2026 NK Works
+  </div>
+
 </footer>
 
 </body>
