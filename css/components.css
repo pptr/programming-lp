@@ -1,8 +1,6 @@
 /* ==========================================================
-   NK Works
    Components
-   ----------------------------------------------------------
-   ボタン・カード・料金・FAQなど再利用コンポーネント
+   再利用可能なUIコンポーネント
 ========================================================== */
 
 /* =========================
@@ -108,8 +106,7 @@
    Hero Buttons
 ======================================================== */
 
-.hero-actions,
-.hero-buttons {
+.hero-actions {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
@@ -120,13 +117,6 @@
    Hero Card
 ======================================================== */
 
-.hero-card {
-  padding: 34px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  background: #ffffff;
-  box-shadow: var(--shadow-lg);
-}
 
 .card-label {
   display: inline-block;
@@ -137,28 +127,6 @@
   letter-spacing: .08em;
 }
 
-.hero-card h2 {
-  margin-bottom: 18px;
-}
-
-.hero-card ul {
-  padding: 0;
-  list-style: none;
-}
-
-.hero-card li {
-  position: relative;
-  padding-left: 28px;
-  margin-bottom: 14px;
-}
-
-.hero-card li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--blue);
-  font-weight: 900;
-}
 
 /* ========================================================
    Surface
@@ -410,20 +378,6 @@
 .price-box .small {
   margin-top: auto;
   padding-top: 14px;
-}
-
-@media (max-width: 768px) {
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .price-box {
-    padding: 24px;
-  }
-
-  .price-area {
-    padding: 24px 16px;
-  }
 }
 
 /* ========================================================

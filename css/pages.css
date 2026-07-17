@@ -1,8 +1,6 @@
 /* ==========================================================
-   NK Works
    Pages
-   ----------------------------------------------------------
-   このページ固有の見た目・装飾
+   トップ・講師ページなどの固有スタイル
 ========================================================== */
 
 /* ========================================================
@@ -30,12 +28,6 @@
   line-height: 1.55;
 }
 
-.hero-description {
-  max-width: 760px;
-  margin: 24px 0 0;
-  color: var(--text-soft);
-  font-size: 18px;
-}
 
 /* ========================================================
    Top Features
@@ -407,29 +399,6 @@
   font-size: 20px;
 }
 
-.career-box {
-  position: relative;
-  margin-bottom: 24px;
-  overflow: hidden;
-}
-
-.career-box::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 6px;
-  background:
-    linear-gradient(
-      180deg,
-      var(--blue),
-      var(--blue-dark)
-    );
-}
-
-.career-box h3 {
-  margin-bottom: 18px;
-  padding-left: 6px;
-}
 
 .career-list {
   display: grid;
@@ -511,7 +480,7 @@
    Contact
 ======================================================== */
 
-.contact .hero-buttons {
+.contact .hero-actions {
   justify-content: center;
 }
 
@@ -643,67 +612,11 @@
    Lesson Style Summary
 ======================================================== */
 
-.lesson-style {
-  position: relative;
-  z-index: 2;
-  padding: 0 0 42px;
-  background: #ffffff;
-}
-
-.lesson-style-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.lesson-style-item {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 14px;
-  align-items: start;
-  padding: 22px;
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  background: #ffffff;
-  box-shadow: var(--shadow-sm);
-}
-
-.lesson-style-icon {
-  display: inline-grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 13px;
-  color: #ffffff;
-  background: linear-gradient(135deg, var(--blue), var(--blue-dark));
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-}
-
-.lesson-style-item h2 {
-  margin: 1px 0 6px;
-  color: var(--blue-dark);
-  font-size: 18px;
-}
-
-.lesson-style-item p {
-  margin: 0;
-  color: var(--text-soft);
-  font-size: 14px;
-  line-height: 1.7;
-}
 
 /* ========================================================
    Compact Top Hero
 ======================================================== */
 
-.hero-brand {
-  display: block;
-  margin-bottom: 2px;
-  font-size: 0.72em;
-  letter-spacing: 0.03em;
-}
 
 .hero-points {
   display: grid;
