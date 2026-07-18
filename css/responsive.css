@@ -385,7 +385,7 @@
 
   :root {
     --container-gutter: 24px;
-    --header-height: 132px;
+    --header-height: 174px;
   }
 
   /* ----------------------------------------------------------
@@ -424,16 +424,20 @@
   }
 
   .site-header-actions {
-    gap: 6px;
+    order: 2;
+    width: 100%;
+    gap: 8px;
   }
 
   .site-header-button {
-    padding: 7px 10px;
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 8px 10px;
     font-size: 11px;
   }
 
   .site-header-button--secondary {
-    display: none;
+    display: inline-flex;
   }
 
   /* ----------------------------------------------------------
