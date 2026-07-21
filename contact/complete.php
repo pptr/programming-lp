@@ -13,6 +13,14 @@ unset($_SESSION['contact_completed']);
   <title>送信完了 | NK Works</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/contact.css">
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VP8MTZC2JE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VP8MTZC2JE');
+  </script>
 </head>
 <body>
 <header class="site-header">
