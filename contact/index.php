@@ -42,7 +42,7 @@ $token = csrf_token();
 <main>
   <section class="page-hero contact-page-hero">
     <div class="container"><div class="page-hero-content">
-      <span class="contact-eyebrow">CONTACT</span>
+      <span class="page-hero-eyebrow">CONTACT</span>
       <h1>お問い合わせ</h1>
       <p class="page-hero-description">レッスン内容、受講方法、料金、予約など、ご不明な点をお気軽にお問い合わせください。</p>
     </div></div>

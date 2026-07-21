@@ -3,7 +3,6 @@
    問い合わせページ固有スタイル
 ========================================================== */
 .contact-page-hero { padding-bottom: 12px; }
-.contact-eyebrow { display:inline-flex; margin-bottom:10px; color:var(--blue); font-size:12px; font-weight:900; letter-spacing:.18em; }
 .contact-form-section { background:rgba(248,250,252,.78); }
 .contact-layout { display:grid; grid-template-columns:minmax(250px,.7fr) minmax(0,1.45fr); gap:28px; align-items:start; }
 .contact-narrow { width:min(100% - var(--container-gutter), 820px); }

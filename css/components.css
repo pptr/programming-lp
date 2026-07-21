@@ -51,6 +51,25 @@
   letter-spacing: -0.025em;
 }
 
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+
+    padding: .35rem .9rem;
+
+    border-radius: 999px;
+
+    background: rgba(43, 93, 233, .1);
+
+    color: var(--color-primary);
+
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
 /* ========================================================
    Button
 ======================================================== */
