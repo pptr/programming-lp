@@ -1,8 +1,21 @@
 <?php
 declare(strict_types=1);
-require_once dirname(__DIR__, 2) . '/apps/contact/bootstrap.php';
-if (empty($_SESSION['contact_completed'])) { redirect('./'); }
-unset($_SESSION['contact_completed']);
+require_once dirname(__DIR__) . '/apps/contact/bootstrap.php';
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !verify_csrf($_POST['csrf_token'] ?? null)) {
+    redirect('./');
+}
+$input = normalize_contact_input($_POST);
+$errors = validate_contact($input);
+$_SESSION['contact_input'] = $input;
+if ($errors) {
+    $_SESSION['contact_errors'] = $errors;
+    redirect('./');
+}
+$_SESSION['contact_confirmed'] = true;
+$categories = contact_categories();
+$sendError = $_SESSION['contact_send_error'] ?? null;
+unset($_SESSION['contact_send_error']);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -10,7 +23,7 @@ unset($_SESSION['contact_completed']);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="NK Worksへのレッスン内容、受講方法、料金、予約、学習相談などのお問い合わせはこちらから。">
-  <title>送信完了 | NK Works</title>
+  <title>入力内容の確認 | NK Works</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/contact.css">
 </head>
@@ -31,7 +44,13 @@ unset($_SESSION['contact_completed']);
       <a class="site-header-button site-header-button--secondary" href="./" aria-current="page">お問い合わせ</a>
     </div>
   </div>
-</header><main><section class="section complete-section"><div class="container contact-narrow"><div class="complete-card surface"><div class="complete-icon" aria-hidden="true">✓</div><span class="contact-eyebrow">THANK YOU</span><h1>お問い合わせを受け付けました</h1><p>ご入力いただいたメールアドレスへ、自動返信メールを送信しました。</p><p>内容を確認のうえ、通常3営業日以内に <strong>info@nkworks.info</strong> よりご連絡いたします。</p><div class="form-actions"><a class="button button--primary" href="../index.html">トップページへ戻る</a></div><p class="complete-note">自動返信メールが届かない場合は、迷惑メールフォルダをご確認ください。</p></div></div></section></main><footer class="site-footer">
+</header><main>
+<section class="page-hero contact-page-hero"><div class="container"><div class="page-hero-content"><span class="contact-eyebrow">CONFIRM</span><h1>入力内容の確認</h1><p class="page-hero-description">内容をご確認のうえ、「この内容で送信する」を押してください。</p></div></div></section>
+<section class="section contact-form-section"><div class="container contact-narrow"><div class="contact-form-card surface">
+<div class="contact-form-heading"><span>確認</span><h2>お問い合わせ内容</h2></div><?php if ($sendError): ?><div class="form-alert form-alert--error" role="alert"><strong><?= h($sendError) ?></strong></div><?php endif; ?>
+<dl class="confirm-list"><div><dt>氏名</dt><dd><?= h($input['name']) ?> 様</dd></div><div><dt>メールアドレス</dt><dd><?= h($input['email']) ?></dd></div><div><dt>電話番号</dt><dd><?= h($input['phone'] !== '' ? $input['phone'] : '未入力') ?></dd></div><div><dt>お問い合わせ種別</dt><dd><?= h($categories[$input['category']]) ?></dd></div><div class="confirm-list-message"><dt>お問い合わせ内容</dt><dd><?= nl2br(h($input['message'])) ?></dd></div></dl>
+<div class="form-actions form-actions--split"><form action="./" method="get"><button type="submit" class="button button--secondary">入力内容を修正する</button></form><form action="send.php" method="post"><input type="hidden" name="csrf_token" value="<?= h(csrf_token()) ?>"><button type="submit" class="button button--primary">この内容で送信する</button></form></div>
+</div></div></section></main><footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
       <h3>NK Works</h3>

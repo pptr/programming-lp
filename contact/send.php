@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-require_once dirname(__DIR__, 2) . '/apps/contact/bootstrap.php';
+require_once dirname(__DIR__) . '/apps/contact/bootstrap.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !verify_csrf($_POST['csrf_token'] ?? null) || empty($_SESSION['contact_confirmed'])) {
     redirect('./');
@@ -18,7 +18,6 @@ if ($errors) {
 
 $autoloadCandidates = [
     PROJECT_ROOT . '/vendor/autoload.php',
-    dirname(PROJECT_ROOT) . '/vendor/autoload.php',
 ];
 $autoload = null;
 foreach ($autoloadCandidates as $candidate) { if (is_file($candidate)) { $autoload = $candidate; break; } }

@@ -8,15 +8,20 @@ session_start([
     'use_strict_mode' => true,
 ]);
 
-const CONTACT_ROOT = __DIR__;
-const PROJECT_ROOT = dirname(__DIR__, 2);
+/** 非公開の問い合わせアプリケーションディレクトリ。 */
+define('CONTACT_ROOT', __DIR__);
+
+/** Gitリポジトリのルートディレクトリ。 */
+define('PROJECT_ROOT', dirname(__DIR__, 2));
 
 require_once CONTACT_ROOT . '/lib/functions.php';
 require_once CONTACT_ROOT . '/lib/Logger.php';
 
 $configFile = CONTACT_ROOT . '/config/mail.php';
 if (!is_file($configFile)) {
-    throw new RuntimeException('メール設定ファイルがありません。config/mail.example.php を複製して mail.php を作成してください。');
+    throw new RuntimeException(
+        'メール設定ファイルがありません。contact/config/mail.example.php を複製して mail.php を作成してください。'
+    );
 }
 
 $mailConfig = require $configFile;
