@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !verify_csrf($_POST['csrf_token'] ?
     redirect('./');
 }
 if (!can_submit_again()) {
-    $_SESSION['contact_send_error'] = '短時間に連続して送信することはできません。しばらく待ってからお試しください。';
+    $_SESSION['flash_error'] = '短時間に連続して送信することはできません。しばらく待ってからお試しください。';
     redirect('confirm.php');
 }
 $input = $_SESSION['contact_input'] ?? [];
@@ -23,7 +23,7 @@ $autoload = null;
 foreach ($autoloadCandidates as $candidate) { if (is_file($candidate)) { $autoload = $candidate; break; } }
 if ($autoload === null) {
     Logger::error('PHPMailer autoload file not found.');
-    $_SESSION['contact_send_error'] = 'メール送信システムを準備中です。info@nkworks.info へ直接お問い合わせください。';
+    $_SESSION['flash_error'] = 'メール送信システムを準備中です。info@nkworks.info へ直接お問い合わせください。';
     redirect('confirm.php');
 }
 require_once $autoload;
@@ -82,6 +82,6 @@ try {
     redirect('complete.php');
 } catch (Exception|Throwable $e) {
     Logger::error('sending mail failed: ' . $e->getMessage());
-    $_SESSION['contact_send_error'] = 'メールを送信できませんでした。時間をおいて再度お試しいただくか、info@nkworks.info へ直接お問い合わせください。';
+    $_SESSION['flash_error'] = 'メールを送信できませんでした。時間をおいて再度お試しいただくか、info@nkworks.info へ直接お問い合わせください。';
     redirect('confirm.php');
 }

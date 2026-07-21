@@ -2,20 +2,35 @@
 declare(strict_types=1);
 require_once dirname(__DIR__) . '/apps/contact/bootstrap.php';
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !verify_csrf($_POST['csrf_token'] ?? null)) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (!verify_csrf($_POST['csrf_token'] ?? null)) {
+        redirect('./');
+    }
+
+    $input = normalize_contact_input($_POST);
+    $errors = validate_contact($input);
+    $_SESSION['contact_input'] = $input;
+
+    if ($errors) {
+        $_SESSION['contact_errors'] = $errors;
+        redirect('./');
+    }
+
+    $_SESSION['contact_confirmed'] = true;
+} elseif ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    // send.php からエラー時に戻された場合は、セッション内の確認済み入力を再表示する。
+    if (empty($_SESSION['contact_confirmed']) || !isset($_SESSION['contact_input']) || !is_array($_SESSION['contact_input'])) {
+        redirect('./');
+    }
+
+    $input = $_SESSION['contact_input'];
+} else {
     redirect('./');
 }
-$input = normalize_contact_input($_POST);
-$errors = validate_contact($input);
-$_SESSION['contact_input'] = $input;
-if ($errors) {
-    $_SESSION['contact_errors'] = $errors;
-    redirect('./');
-}
-$_SESSION['contact_confirmed'] = true;
+
 $categories = contact_categories();
-$sendError = $_SESSION['contact_send_error'] ?? null;
-unset($_SESSION['contact_send_error']);
+$sendError = $_SESSION['flash_error'] ?? null;
+unset($_SESSION['flash_error']);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
