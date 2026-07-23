@@ -67,13 +67,67 @@ unset($_SESSION['flash_error']);
       <a class="site-header-button site-header-button--secondary" href="./" aria-current="page">お問い合わせ</a>
     </div>
   </div>
-</header><main>
-<section class="page-hero contact-page-hero"><div class="container"><div class="page-hero-content"><span class="contact-eyebrow">CONFIRM</span><h1>入力内容の確認</h1><p class="page-hero-description">内容をご確認のうえ、「この内容で送信する」を押してください。</p></div></div></section>
-<section class="section contact-form-section"><div class="container contact-narrow"><div class="contact-form-card surface">
-<div class="contact-form-heading"><span>確認</span><h2>お問い合わせ内容</h2></div><?php if ($sendError): ?><div class="form-alert form-alert--error" role="alert"><strong><?= h($sendError) ?></strong></div><?php endif; ?>
-<dl class="confirm-list"><div><dt>氏名</dt><dd><?= h($input['name']) ?> 様</dd></div><div><dt>メールアドレス</dt><dd><?= h($input['email']) ?></dd></div><div><dt>電話番号</dt><dd><?= h($input['phone'] !== '' ? $input['phone'] : '未入力') ?></dd></div><div><dt>お問い合わせ種別</dt><dd><?= h($categories[$input['category']]) ?></dd></div><div class="confirm-list-message"><dt>お問い合わせ内容</dt><dd><?= nl2br(h($input['message'])) ?></dd></div></dl>
-<div class="form-actions form-actions--split"><form action="./" method="get"><button type="submit" class="button button--secondary">入力内容を修正する</button></form><form action="send.php" method="post"><input type="hidden" name="csrf_token" value="<?= h(csrf_token()) ?>"><button type="submit" class="button button--primary">この内容で送信する</button></form></div>
-</div></div></section></main><footer class="site-footer">
+</header>
+
+<main>
+
+  <section class="page-hero contact-page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <span class="contact-eyebrow">CONFIRM</span>
+        <h1>入力内容の確認</h1>
+        <p class="page-hero-description">内容をご確認のうえ、「この内容で送信する」を押してください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-form-section">
+    <div class="container contact-narrow">
+      <div class="contact-form-card surface">
+        <div class="contact-form-heading">
+          <span>確認</span>
+          <h2>お問い合わせ内容</h2>
+        </div>
+        <?php if ($sendError): ?>
+          <div class="form-alert form-alert--error" role="alert"><strong><?= h($sendError) ?></strong></div>
+        <?php endif; ?>
+        <dl class="confirm-list">
+          <div>
+            <dt>氏名</dt>
+            <dd><?= h($input['name']) ?> 様</dd>
+          </div>
+          <div>
+            <dt>メールアドレス</dt>
+            <dd><?= h($input['email']) ?></dd>
+          </div>
+          <div>
+            <dt>電話番号</dt>
+            <dd><?= h($input['phone'] !== '' ? $input['phone'] : '未入力') ?></dd>
+          </div>
+          <div>
+            <dt>お問い合わせ種別</dt>
+            <dd><?= h($categories[$input['category']]) ?></dd>
+          </div>
+          <div class="confirm-list-message">
+            <dt>お問い合わせ内容</dt>
+            <dd><?= nl2br(h($input['message'])) ?></dd>
+          </div>
+        </dl>
+        <div class="form-actions form-actions--split">
+          <form action="./" method="get">
+            <button type="submit" class="button button--secondary">入力内容を修正する</button>
+          </form>
+          <form action="send.php" method="post">
+            <input type="hidden" name="csrf_token" value="<?= h(csrf_token()) ?>">
+            <button type="submit" class="button button--primary">この内容で送信する</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
       <h3>NK Works</h3>

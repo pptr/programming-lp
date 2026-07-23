@@ -20,6 +20,7 @@ unset($_SESSION['contact_completed']);
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-VP8MTZC2JE');
+    gtag('event', 'contact_complete');
   </script>
 </head>
 <body>
@@ -39,7 +40,27 @@ unset($_SESSION['contact_completed']);
       <a class="site-header-button site-header-button--secondary" href="./" aria-current="page">お問い合わせ</a>
     </div>
   </div>
-</header><main><section class="section complete-section"><div class="container contact-narrow"><div class="complete-card surface"><div class="complete-icon" aria-hidden="true">✓</div><span class="contact-eyebrow">THANK YOU</span><h1>お問い合わせを受け付けました</h1><p>ご入力いただいたメールアドレスへ、自動返信メールを送信しました。</p><p>内容を確認のうえ、通常3営業日以内に <strong>info@nkworks.info</strong> よりご連絡いたします。</p><div class="form-actions"><a class="button button--primary" href="../index.html">トップページへ戻る</a></div><p class="complete-note">自動返信メールが届かない場合は、迷惑メールフォルダをご確認ください。</p></div></div></section></main><footer class="site-footer">
+</header>
+
+<main>
+  <section class="section complete-section">
+    <div class="container contact-narrow">
+      <div class="complete-card surface">
+        <div class="complete-icon" aria-hidden="true">✓</div>
+        <span class="contact-eyebrow">THANK YOU</span>
+        <h1>お問い合わせを受け付けました</h1>
+        <p>ご入力いただいたメールアドレスへ、自動返信メールを送信しました。</p>
+        <p>内容を確認のうえ、通常3営業日以内に <strong>info@nkworks.info</strong> よりご連絡いたします。</p>
+        <div class="form-actions">
+          <a class="button button--primary" href="../index.html">トップページへ戻る</a>
+        </div>
+        <p class="complete-note">自動返信メールが届かない場合は、迷惑メールフォルダをご確認ください。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
       <h3>NK Works</h3>

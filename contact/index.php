@@ -57,6 +57,7 @@ $token = csrf_token();
   </section>
   <section class="section contact-form-section">
     <div class="container contact-layout">
+
       <aside class="contact-guide surface">
         <img class="contact-guide-icon" src="../images/icons/mail.png" alt="" aria-hidden="true">
         <h2>お問い合わせの前に</h2>
@@ -68,24 +69,64 @@ $token = csrf_token();
         </dl>
         <p class="contact-guide-note">送信できない場合は、上記メールアドレスへ直接ご連絡ください。</p>
       </aside>
+      
       <div class="contact-form-card surface">
-        <div class="contact-form-heading"><span>入力</span><h2>お問い合わせ内容を入力</h2><p><em>必須</em>の項目は必ず入力してください。</p></div>
+        <div class="contact-form-heading">
+          <span>入力</span><h2>お問い合わせ内容を入力</h2><p><em>必須</em>の項目は必ず入力してください。</p>
+        </div>
         <?php if ($errors): ?><div class="form-alert form-alert--error" role="alert"><strong>入力内容をご確認ください。</strong><ul><?php foreach ($errors as $error): ?><li><?= h($error) ?></li><?php endforeach; ?></ul></div><?php endif; ?>
         <form action="confirm.php" method="post" class="contact-form" novalidate>
           <input type="hidden" name="csrf_token" value="<?= h($token) ?>">
-          <div class="honeypot" aria-hidden="true"><label>ウェブサイト<input type="text" name="website" value="" tabindex="-1" autocomplete="off"></label></div>
-          <div class="form-field<?= isset($errors['name']) ? ' has-error' : '' ?>"><label for="name">氏名 <span class="required">必須</span></label><input id="name" name="name" type="text" maxlength="100" autocomplete="name" value="<?= h($input['name']) ?>" required><?php if (isset($errors['name'])): ?><p class="field-error"><?= h($errors['name']) ?></p><?php endif; ?></div>
-          <div class="form-field<?= isset($errors['email']) ? ' has-error' : '' ?>"><label for="email">メールアドレス <span class="required">必須</span></label><input id="email" name="email" type="email" maxlength="254" autocomplete="email" inputmode="email" value="<?= h($input['email']) ?>" required><p class="field-help">自動返信メールを受信できるアドレスをご入力ください。</p><?php if (isset($errors['email'])): ?><p class="field-error"><?= h($errors['email']) ?></p><?php endif; ?></div>
-          <div class="form-field<?= isset($errors['phone']) ? ' has-error' : '' ?>"><label for="phone">電話番号 <span class="optional">任意</span></label><input id="phone" name="phone" type="tel" maxlength="30" autocomplete="tel" inputmode="tel" value="<?= h($input['phone']) ?>"><?php if (isset($errors['phone'])): ?><p class="field-error"><?= h($errors['phone']) ?></p><?php endif; ?></div>
-          <div class="form-field<?= isset($errors['category']) ? ' has-error' : '' ?>"><label for="category">お問い合わせ種別 <span class="required">必須</span></label><select id="category" name="category" required><option value="">選択してください</option><?php foreach ($categories as $value => $label): ?><option value="<?= h($value) ?>"<?= $input['category'] === $value ? ' selected' : '' ?>><?= h($label) ?></option><?php endforeach; ?></select><?php if (isset($errors['category'])): ?><p class="field-error"><?= h($errors['category']) ?></p><?php endif; ?></div>
-          <div class="form-field<?= isset($errors['message']) ? ' has-error' : '' ?>"><div class="form-label-row"><label for="message">お問い合わせ内容 <span class="required">必須</span></label><span class="character-count" id="message-count">0 / 2,000</span></div><textarea id="message" name="message" rows="9" minlength="10" maxlength="2000" required><?= h($input['message']) ?></textarea><?php if (isset($errors['message'])): ?><p class="field-error"><?= h($errors['message']) ?></p><?php endif; ?></div>
-          <div class="form-field form-field--privacy<?= isset($errors['privacy']) ? ' has-error' : '' ?>"><label class="checkbox-label"><input type="checkbox" name="privacy" value="1"<?= $input['privacy'] === '1' ? ' checked' : '' ?>><span>プライバシーポリシーに同意する <span class="required">必須</span></span></label><p class="field-help">送信いただいた情報は、お問い合わせへの回答のためにのみ使用します。</p><?php if (isset($errors['privacy'])): ?><p class="field-error"><?= h($errors['privacy']) ?></p><?php endif; ?></div>
-          <div class="form-actions"><button type="submit" class="button button--primary">入力内容を確認する</button></div>
+          <div class="honeypot" aria-hidden="true">
+            <label>ウェブサイト<input type="text" name="website" value="" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <div class="form-field<?= isset($errors['name']) ? ' has-error' : '' ?>">
+            <label for="name">氏名 <span class="required">必須</span></label>
+            <input id="name" name="name" type="text" maxlength="100" autocomplete="name" value="<?= h($input['name']) ?>" required><?php if (isset($errors['name'])): ?><p class="field-error"><?= h($errors['name']) ?></p><?php endif; ?>
+          </div>
+
+          <div class="form-field<?= isset($errors['email']) ? ' has-error' : '' ?>">
+            <label for="email">メールアドレス <span class="required">必須</span></label>
+            <input id="email" name="email" type="email" maxlength="254" autocomplete="email" inputmode="email" value="<?= h($input['email']) ?>" required><p class="field-help">自動返信メールを受信できるアドレスをご入力ください。</p><?php if (isset($errors['email'])): ?><p class="field-error"><?= h($errors['email']) ?></p><?php endif; ?>
+          </div>
+
+          <div class="form-field<?= isset($errors['phone']) ? ' has-error' : '' ?>">
+            <label for="phone">電話番号 <span class="optional">任意</span></label>
+            <input id="phone" name="phone" type="tel" maxlength="30" autocomplete="tel" inputmode="tel" value="<?= h($input['phone']) ?>"><?php if (isset($errors['phone'])): ?><p class="field-error"><?= h($errors['phone']) ?></p><?php endif; ?>
+          </div>
+
+          <div class="form-field<?= isset($errors['category']) ? ' has-error' : '' ?>">
+            <label for="category">お問い合わせ種別 <span class="required">必須</span></label>
+            <select id="category" name="category" required><option value="">選択してください</option><?php foreach ($categories as $value => $label): ?><option value="<?= h($value) ?>"<?= $input['category'] === $value ? ' selected' : '' ?>><?= h($label) ?></option><?php endforeach; ?></select>
+            <?php if (isset($errors['category'])): ?><p class="field-error"><?= h($errors['category']) ?></p><?php endif; ?>
+          </div>
+
+          <div class="form-field<?= isset($errors['message']) ? ' has-error' : '' ?>">
+            <div class="form-label-row">
+              <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
+              <span class="character-count" id="message-count">0 / 2,000</span>
+            </div>
+            <textarea id="message" name="message" rows="9" minlength="10" maxlength="2000" required><?= h($input['message']) ?></textarea>
+            <?php if (isset($errors['message'])): ?><p class="field-error"><?= h($errors['message']) ?></p><?php endif; ?>
+          </div>
+
+          <div class="form-field form-field--privacy<?= isset($errors['privacy']) ? ' has-error' : '' ?>">
+            <label class="checkbox-label"><input type="checkbox" name="privacy" value="1"<?= $input['privacy'] === '1' ? ' checked' : '' ?>><span>プライバシーポリシーに同意する <span class="required">必須</span></span></label>
+            <p class="field-help">送信いただいた情報は、お問い合わせへの回答のためにのみ使用します。</p>
+            <?php if (isset($errors['privacy'])): ?><p class="field-error"><?= h($errors['privacy']) ?></p><?php endif; ?>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="button button--primary">入力内容を確認する</button>
+          </div>
+
         </form>
       </div>
     </div>
   </section>
 </main>
+
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
