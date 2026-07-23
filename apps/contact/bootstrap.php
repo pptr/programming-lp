@@ -17,7 +17,7 @@ define('PROJECT_ROOT', dirname(__DIR__, 2));
 require_once CONTACT_ROOT . '/lib/functions.php';
 require_once CONTACT_ROOT . '/lib/Logger.php';
 
-$configFile = CONTACT_ROOT . '/config/mail.php';
+$configFile = PROJECT_ROOT . '/config/mail.php';
 if (!is_file($configFile)) {
     throw new RuntimeException(
         'メール設定ファイルがありません。contact/config/mail.example.php を複製して mail.php を作成してください。'
